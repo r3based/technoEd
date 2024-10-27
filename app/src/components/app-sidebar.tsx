@@ -20,21 +20,11 @@ const items = [
     },
     {
         title: "Soft skills",
-        url: "#",
+        url: "/soft-skills",
         icon: Inbox,
     },
     {
-        title: "Calendar",
-        url: "#",
-        icon: Calendar,
-    },
-    {
-        title: "Search",
-        url: "#",
-        icon: Search,
-    },
-    {
-        title: "Settings",
+        title: "Аккаунт",
         url: "#",
         icon: Settings,
     },
