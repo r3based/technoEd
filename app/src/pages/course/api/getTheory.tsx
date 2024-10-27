@@ -1,11 +1,10 @@
 export interface CourseInterface {
     id: string;
     name: string;
-    text: string; // HTML string
+    text: string;
     testId: string;
 }
 
-// Mock data
 const courses: CourseInterface[] = [
     {
         id: '1',

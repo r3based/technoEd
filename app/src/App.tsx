@@ -8,6 +8,7 @@ import Layout from './pages/layout/layout';
 import RequireAuth from './pages/auth/reqr/requireAuth';
 import Course from "./pages/course/course";
 import Courses from "./pages/course/cources";
+import Admin from './pages/admin/admin';
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                         />
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/courses/:id" element={<Course />} />
+                        <Route path="/admin-panel" element={<Admin />}></Route>
                         {/* Add more protected routes here as needed */}
                     </Routes>
                 </div>

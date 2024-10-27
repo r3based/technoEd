@@ -1,0 +1,7 @@
+/* src/pages/admin/admin.module.css */
+
+.adminContainer {
+    display: flex;
+    height: 100vh;
+    font-family: 'Inter', sans-serif; /* Assuming you're using Inter or a similar font */
+}
