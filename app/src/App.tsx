@@ -21,12 +21,12 @@ const App = () => {
 
                         {/* Protected Routes */}
                         <Route
-                            path="/"
-                            element={
-                                <RequireAuth>
-                                    <Main />
-                                </RequireAuth>
-                            }
+                            path="/" element={<Main />}
+                            // element={
+                            //     <RequireAuth>
+                            //         <Main />
+                            //     </RequireAuth>
+                            // }
                         />
                         {/* Add more protected routes here as needed */}
                     </Routes>

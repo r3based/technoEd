@@ -14,12 +14,12 @@ import {
 // Menu items.
 const items = [
     {
-        title: "Home",
-        url: "#",
+        title: "Корпоративные нормы",
+        url: "/",
         icon: Home,
     },
     {
-        title: "Inbox",
+        title: "Soft skills",
         url: "#",
         icon: Inbox,
     },
@@ -45,7 +45,7 @@ export function AppSidebar() {
         <Sidebar>
             <SidebarContent>
                 <SidebarGroup>
-                    <SidebarGroupLabel>Application</SidebarGroupLabel>
+                    <SidebarGroupLabel>Меню</SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {items.map((item) => (
