@@ -9,12 +9,16 @@ import RequireAuth from './pages/auth/reqr/requireAuth';
 import Course from "./pages/course/course";
 import Courses from "./pages/course/cources";
 import Admin from './pages/admin/admin';
+import Soft from './pages/softSkills/soft';
+import Footer from './pages/footer/footer';
+
 
 const App = () => {
     return (
         <Router>
             <Layout>
                 <div className="min-h-screen w-full flex items-center content-center">
+                    <div className='flex-grow'>
                     <Routes>
                         {/* Public Routes */}
                         <Route path="/register" element={<Register />} />
@@ -31,11 +35,14 @@ const App = () => {
                             //     </RequireAuth>
                             // }
                         />
+                        <Route path="/soft-skills" element={<Soft />} />
                         <Route path="/courses" element={<Courses />} />
                         <Route path="/courses/:id" element={<Course />} />
                         <Route path="/admin-panel" element={<Admin />}></Route>
                         {/* Add more protected routes here as needed */}
                     </Routes>
+                  </div>
+                <Footer />
                 </div>
             </Layout>
         </Router>
