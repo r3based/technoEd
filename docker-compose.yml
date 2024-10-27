@@ -1,0 +1,61 @@
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    expose:
+      - "8000:8000"
+    volumes:
+      - ./backend:/code
+    environment:
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=emilgan12
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=hr-monitor
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    expose:
+      - "80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  db:
+    image: postgres:15.3
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=emilgan12
+      - POSTGRES_DB=hr-monitor
+    expose:
+      - "5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge
