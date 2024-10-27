@@ -1,5 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom';
 
+// @ts-ignore
 const RequireAuth = ({ children }) => {
     const location = useLocation();
     const token = localStorage.getItem('jwtToken');
